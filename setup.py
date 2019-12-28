@@ -14,8 +14,9 @@ setup(
     url='https://github.com/ohahlev/ahlev-django-vehicle/tree/%s' % vehicle.__version__,
     packages=find_packages(),
     install_requires=[
-        'django-tinymce',
         'ahlev-django-css-js',
+        'django-tinymce',
+        'imagekit',
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
