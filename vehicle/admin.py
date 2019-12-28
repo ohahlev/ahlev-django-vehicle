@@ -1,4 +1,4 @@
-from .admins.vehicle_make_admin import VehicleMakeAdmin
+from .admins.maker_admin import MakerAdmin
 from .admins.vehicle_model_admin import VehicleModelAdmin
 from .admins.body_type_admin import BodyTypeAdmin
 from .admins.drive_type_admin import DriveTypeAdmin

@@ -3,9 +3,9 @@ from django.contrib import admin
 from imagekit.admin import AdminThumbnail
 from imagekit.cachefiles import ImageCacheFile
 from ..models.vehicle import Vehicle
-from ..models.vehicle_make import VehicleMake
+from ..models.maker import Maker
 
-class VehicleMakeAdmin(admin.ModelAdmin):
+class MakerAdmin(admin.ModelAdmin):
 
     def preview_thumbnail(self, obj):
         if obj.logo_thumbnail:
@@ -38,4 +38,4 @@ class VehicleMakeAdmin(admin.ModelAdmin):
         )
         '''
         
-admin.site.register(VehicleMake, VehicleMakeAdmin)
+admin.site.register(Maker, MakerAdmin)

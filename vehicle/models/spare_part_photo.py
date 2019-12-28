@@ -1,20 +1,19 @@
 from django.db import models
+from ..models.spare_part import SparePart
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFit
 
-class VehicleMake(models.Model):
-    name = models.CharField(max_length=32, unique=True)
-    logo = models.ImageField(upload_to='vehicle_make')
-    logo_thumbnail = ImageSpecField(source='logo', 
+class SparePartPhoto(models.Model):
+    photo = models.ImageField(upload_to='spare_part_photo')
+    photo_thumbnail = ImageSpecField(source='photo', 
         processors=[ResizeToFit(None, 200)],
         format='PNG',
         options={'quality': 100})
     date_created = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
 
-    class Meta:
-        verbose_name = "Vehicle Make"
-        verbose_name_plural = "Vehicle Makes"
+    spare_part = models.ForeignKey(SparePart, on_delete=models.CASCADE, verbose_name='Spare Part')
 
-    def __str__(self):
-        return self.name
+    class Meta:
+        verbose_name = "Spare Part Photo"
+
