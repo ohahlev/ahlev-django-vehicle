@@ -7,8 +7,8 @@ class BodyType(models.Model):
     last_updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = "Body Type"
-        verbose_name_plural = "Body Types"
+        verbose_name = 'Body Type'
+        db_table = 'body_type'
 
     def __str__(self):  
         return self.name

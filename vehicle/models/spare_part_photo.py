@@ -15,5 +15,6 @@ class SparePartPhoto(models.Model):
     spare_part = models.ForeignKey(SparePart, on_delete=models.CASCADE, verbose_name='Spare Part')
 
     class Meta:
-        verbose_name = "Spare Part Photo"
+        verbose_name = 'Spare Part Photo'
+        db_table = 'spare_part_photo'
 

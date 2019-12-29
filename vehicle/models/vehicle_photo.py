@@ -15,5 +15,6 @@ class VehiclePhoto(models.Model):
     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE, verbose_name='Vehicle')
     
     class Meta:
-        verbose_name = "Vehicle Photo"
+        verbose_name = 'Vehicle Photo'
+        db_table = 'vehicle_photo'
 

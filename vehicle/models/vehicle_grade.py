@@ -7,8 +7,8 @@ class VehicleGrade(models.Model):
     last_updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = "Vehicle Grade"
-        verbose_name_plural = "Vehicle Grades"
+        verbose_name = 'Vehicle Grade'
+        db_table = 'vehicle_grade'
 
     def __str__(self):  
         return self.name
