@@ -14,8 +14,8 @@ class VehicleModel(models.Model):
     last_updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = "Vehicle Model"
-        verbose_name_plural = "Vehicle Models"
+        verbose_name = 'Vehicle Model'
+        db_table = 'vehicle_model'
 
     def __str__(self):  
         return self.name

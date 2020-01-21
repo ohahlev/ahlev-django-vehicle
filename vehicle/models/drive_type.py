@@ -7,8 +7,8 @@ class DriveType(models.Model):
     last_updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = "Drive Type"
-        verbose_name_plural = "Drive Types"
+        verbose_name = 'Drive Type'
+        db_table = 'drive_type'
 
     def __str__(self):  
         return self.name

@@ -8,8 +8,9 @@ class VehicleColor(models.Model):
     last_updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = "Vehicle Color"
-        verbose_name_plural = "Vehicle Colors"
+        verbose_name = 'Vehicle Color'
+        db_table = 'vehicle_color'
+
 
     def __str__(self):  
         return self.name

@@ -6,3 +6,4 @@ from .admins.fuel_type_admin import FuelTypeAdmin
 from .admins.vehicle_grade_admin import VehicleGradeAdmin
 from .admins.vehicle_color_admin import VehicleColorAdmin
 from .admins.vehicle_admin import VehicleAdmin
+from .admins.spare_part_admin import SparePartAdmin
